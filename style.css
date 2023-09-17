@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(./fonts/robotoslab-variablefont_wght-webfont.woff);
+    src: url(./fonts/robotoslab-variablefont_wght-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #d6d3d1;
+    font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+#veil{
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+
+#form{
+   background-color: #d6d3d1;
+   width: 250px;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   padding: 20px;
+   padding-top: 30px;
+}
+
+#submit-button{
+   margin-top: 15px;
+   width: 100px;
+   padding: 7px;
+   border-radius: 5px;
+   border: 1px solid #0c0a09;background-color: #44403c;
+   font-family: "Roboto slab";
+   color: #e7e5e4;
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;   
+   transition: transform 0.2s ease-in-out;
+}
+
+#submit-button:hover{
+   color: #0c0a09;
+   transform: scale(1.1);
+}
+
+.form-group{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 15px;
+}
+
+.form-check{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+input[type="checkbox"] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   width: 20px;
+   height: 20px;
+   background-color: #e7e5e4; 
+   border: 1px solid #0c0a09; 
+   border-radius: 3px;
+   position: relative; 
+ }
+ 
+ /* Estilos para la marca de verificación */
+ input[type="checkbox"]::before {
+   content: "\2713"; /* Código Unicode para una marca de verificación ✓ */
+   display: block;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   line-height: 20px; /* Alinea verticalmente la marca de verificación */
+   font-size: 16px; /* Ajusta el tamaño de la marca de verificación */
+   color: transparent; /* Hace que el texto sea transparente */
+   position: absolute; /* Permite el posicionamiento absoluto */
+   top: 0; /* Coloca la marca en la parte superior del checkbox */
+   left: 0; /* Coloca la marca en la parte izquierda del checkbox */
+ }
+ 
+ /* Estilos cuando está marcado */
+ input[type="checkbox"]:checked {
+   background-color: #292524; /* Color de fondo cuando está marcado */
+   border: 1px solid #292524; /* Borde opcional */
+ }
+ 
+ /* Estilos para la marca de verificación cuando está marcado */
+ input[type="checkbox"]:checked::before {
+   color: #fff; /* Cambia el color de la marca de verificación cuando está marcado */
+ }
+ 
+label{
+   margin-bottom: 5px;
+}
+
+.input-text{
+   border: 1px solid #44403c;
+   width: 200px;
+   height: 1.2rem;
+   border-radius: 3px;
+   background-color: #f5f5f4;
+}
+
+.input-text:focus{
+   border: 2px solid #0c0a09;
+}
+
+ #header-container{
+    display: grid;
+    grid-template-columns: 1fr;
+ }
+
+ #header{
+    background-color: #44403c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #header-title{
+    color: #0c0a09;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 20px;
+ }
+
+ #body-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+ }
+
+ #card-container{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit);
+    gap: 30px;
+    margin:20px 10px 20px 10px;
+ }
+
+ .card{
+   border: 1px solid #0c0a09;
+   border-radius: 30px;
+   width: 200px;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+   background-color: #e7e5e4;
+   transition: transform 0.3s ease-in-out;
+ }
+
+ .card:hover{
+   transform: scale(1.03);
+ }
+
+.card-text{
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+#delete-button{
+   padding: 6px;
+   margin-top: 15px;
+   border-radius: 5px;
+   border: 1px solid #0c0a09;
+   background-image: linear-gradient(120deg, #44403c , #0c0a09 );
+   font-family: "Roboto slab";
+   font-size: 16px;
+   color: #f5f5f4;
+   cursor: pointer;
+}
+
+ #add-button{
+    grid-column: 1 / 2;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 24px;
+    color: #0c0a09;
+    font-weight: 700;
+ }
+
+ #button{
+    border-radius: 100%;
+    border: none;
+    background-image: linear-gradient(140deg, #78716c 30%, #44403c 60%);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+   }
+
+#icon:hover{
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(90deg);
+ }
+
+ #button:hover{
+    transform: scale(1.2);
+ }
+
+ #icon{
+    height: 3.2rem;
+    width: 2.8rem;
+ }
