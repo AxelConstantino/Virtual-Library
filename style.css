@@ -181,9 +181,20 @@ label{
    text-align: center;
 }
 
+.read-button{
+   padding: 6px;
+   border-radius: 5px;
+   margin-top: 15px;
+   border: 1px solid #0c0a09;
+   background-image: linear-gradient(120deg, #fafaf9, #a8a29e);
+   font-size: 16px;
+   font-family: "Roboto slab";
+   cursor: pointer;
+}
+
 #delete-button{
    padding: 6px;
-   margin-top: 15px;
+   margin-top: 20px;
    border-radius: 5px;
    border: 1px solid #0c0a09;
    background-image: linear-gradient(120deg, #44403c , #0c0a09 );
